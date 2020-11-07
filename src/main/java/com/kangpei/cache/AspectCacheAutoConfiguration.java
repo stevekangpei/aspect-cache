@@ -9,7 +9,7 @@ import org.springframework.context.annotation.EnableAspectJAutoProxy;
  * author: kangpei <br>
  * version: 1.0 <br>
  */
-@ComponentScan("")
+@ComponentScan("com.kangpei.cache")
 @EnableAspectJAutoProxy
 public class AspectCacheAutoConfiguration {
 }
