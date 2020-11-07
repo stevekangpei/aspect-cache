@@ -9,4 +9,12 @@ package com.kangpei.cache.constants;
 public class CacheConstants {
 
     public static final String CACHE_PREFIX = "aspect-cache";
+
+    public static final String CACHE_REDIS_NAME = "redis";
+
+    public static final String POUND_SIGN = "#";
+
+    public static final String SINGLE_QUOTATION = "'";
+
+    public static final String RETURN_VALUE = POUND_SIGN + "retVal";
 }
