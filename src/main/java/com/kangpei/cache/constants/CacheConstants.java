@@ -12,6 +12,8 @@ public class CacheConstants {
 
     public static final String CACHE_REDIS_NAME = "redis";
 
+    public static final String CACHE_EHCACHE_NAME = "eh";
+
     public static final String POUND_SIGN = "#";
 
     public static final String SINGLE_QUOTATION = "'";

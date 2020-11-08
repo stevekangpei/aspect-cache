@@ -18,6 +18,8 @@ import java.io.File;
 import java.net.URL;
 import java.time.Duration;
 
+import static com.kangpei.cache.constants.CacheConstants.CACHE_EHCACHE_NAME;
+
 /**
  * description: EhCacheConfig <br>
  * date: 2020/11/7 7:45 下午 <br>
@@ -25,7 +27,7 @@ import java.time.Duration;
  * version: 1.0 <br>
  */
 @Configuration
-@ConditionalOnProperty(prefix = CacheConstants.CACHE_PREFIX, name = "provider", havingValue = "ehcache")
+@ConditionalOnProperty(prefix = CacheConstants.CACHE_PREFIX, name = "provider", havingValue = CACHE_EHCACHE_NAME)
 public class EhCacheConfig {
 
     private final EHCacheProperties cacheProperties;

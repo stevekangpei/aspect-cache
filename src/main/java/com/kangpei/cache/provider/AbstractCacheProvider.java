@@ -2,10 +2,10 @@ package com.kangpei.cache.provider;
 
 import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.TypeReference;
+import com.kangpei.cache.serializer.ISerializer;
+import com.kangpei.cache.serializer.StringSerializer;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.autoconfigure.cache.CacheProperties;
 
 import java.lang.reflect.ParameterizedType;
 import java.lang.reflect.Type;
@@ -22,8 +22,12 @@ public abstract class AbstractCacheProvider implements CacheProvider {
 
     private static final Logger log = LoggerFactory.getLogger(AbstractCacheProvider.class);
 
-    @Autowired
-    protected CacheProperties cacheProperties;
+    public final ISerializer<String> keySerializer = new StringSerializer();
+    public final ISerializer<Object> valueSerializer;
+
+    public AbstractCacheProvider(ISerializer<Object> valueSerializer) {
+        this.valueSerializer = valueSerializer;
+    }
 
     public Object handleReturnValue(String cacheValue, Type type) {
 
