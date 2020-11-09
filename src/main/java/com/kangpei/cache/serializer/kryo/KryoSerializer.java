@@ -16,11 +16,9 @@ import java.util.Date;
  */
 public class KryoSerializer<T> implements ISerializer<T>, ICloner<T> {
 
-    private KryoContext kryoContext;
+    private KryoContext kryoContext = new DefaultKryoContext();
 
-    public KryoSerializer(KryoContext kryoContext) {
-
-        this.kryoContext = new DefaultKryoContext();
+    public KryoSerializer() {
     }
 
     @Override

@@ -19,4 +19,8 @@ public class CacheConstants {
     public static final String SINGLE_QUOTATION = "'";
 
     public static final String RETURN_VALUE = POUND_SIGN + "retVal";
+
+    public static final String DEFAULT_CACHE_PROVIDER = CACHE_EHCACHE_NAME;
+
+    public static final String DEFAULT_CACHE_KEY_GENERATOR_NAME = "default";
 }
